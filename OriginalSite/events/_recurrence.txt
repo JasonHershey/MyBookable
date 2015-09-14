@@ -1,0 +1,22 @@
+﻿<table id='recurrence-input-table'>
+<tr>
+<td id='recurrence-input-instances'>
+<p>Number of instances</p>
+<input id='recurrence-instances-spinner' name='recurrence-instances'/> instances (maximum of 20)
+</td>
+<td id='recurrence-input-pattern-frequency'>
+<p>Recurrence</p>
+<input type='radio' id='recurrence-frequency-daily' name='recurrence-frequency' onchange='updateinterval(this)' value='1'/><span id='recurrence-frequency-daily-label'>Daily</span>
+<input type='radio' id='recurrence-frequency-weekly' name='recurrence-frequency' onchange='updateinterval(this)' value='2'/><span id='recurrence-frequency-weekly-label'>Weekly</span>
+<input type='radio' id='recurrence-frequency-monthly' name='recurrence-frequency' onchange='updateinterval(this)' value='3'/><span id='recurrence-frequency-monthly-label'>Monthly</span>
+<input type='radio' id='recurrence-frequency-yearly' name='recurrence-frequency' onchange='updateinterval(this)' value='4'/><span id='recurrence-frequency-yearly-label'>Yearly</span>
+</td>
+
+<td id='recurrence-input-interval'>
+<p>Frequency</p>
+Every <input id='recurrence-frequencey-spinner' name='recurrence-interval'/><span id='recurrence-input-interval-counter'>st</span> <span id='recurrence-input-interval-label'>day</span>
+</td>
+</tr>
+</table>
+
+

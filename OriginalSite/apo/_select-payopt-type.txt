@@ -1,0 +1,18 @@
+﻿<?php include '_getpaymentoptiontypes.php' ?>
+<?php
+$rownum=0;
+while ($row = mysqli_fetch_array($payoptresults))
+{
+if ($aporow['Payment Type Name']==$row['paymentTypename'])
+{
+$rownum=$rownum+1;
+echo "<input type='radio' id='create-apo-payopt-type-".$rownum."' name='create-apo-payopt-type' value='".$row['id']."' checked/><span class='create-apo-payopt-input-label'>".$row['paymentTypename']."</span>";
+
+}
+else
+{
+$rownum=$rownum+1;
+echo "<input type='radio' id='create-apo-payopt-type-".$rownum."' name='create-apo-payopt-type' value='".$row['id']."'/><span class='create-apo-payopt-input-label'>".$row['paymentTypename']."</span>";
+}
+}
+?>

@@ -1,0 +1,62 @@
+﻿<?php include '_getcommonfeatures.php' ?>
+
+<td id='create-bookable-custom-features' colspan='4'>
+	<p id='create-bookable-custom-features-label'>List more features</p>
+
+	<table id='create-bookable-common-features-place-input-table'>
+        <tr>
+            <td id='create-bookable-custom-feature-1-input'>
+                <input type='text' id='create-bookable-custom-feature-1' name='custom-feature-1' value='<?php
+				echo $customfeature1;
+				?>'><?php
+				echo $feature1
+				?></input>
+            </td>
+            <td id='create-bookable-custom-feature-2-input'>
+                <input type='text' id='create-bookable-custom-feature-2' name='custom-feature-2' value='<?php
+				echo $customfeature2;
+				?>'/>
+            </td>
+        </tr>
+        <tr>
+            <td id='create-bookable-custom-feature-3-input'>
+                <input type='text' id='create-bookable-custom-feature-3' name='custom-feature-3' value='<?php
+				echo $customfeature3;
+				?>'/>
+            </td>
+            <td id='create-bookable-custom-feature-4-input'>
+                <input type='text' id='create-bookable-custom-feature-4' name='custom-feature-4' value='<?php
+				echo $customfeature4;
+				?>'/>
+            </td>
+        </tr>
+
+		<tr>
+            <td id='create-bookable-custom-feature-5-input'>
+                <input type='text' id='create-bookable-custom-feature-5' name='custom-feature-5' value='<?php
+				echo $customfeature5;
+				?>'/>
+            </td>
+            <td id='create-bookable-custom-feature-6-input'>
+                <input type='text' id='create-bookable-custom-feature-6' name='custom-feature-6' value='<?php
+				echo $customfeature6;
+				?>'/>
+            </td>
+        </tr>
+
+		<tr>
+            <td id='create-bookable-custom-feature-7-input'>
+                <input type='text' id='create-bookable-custom-feature-7' name='custom-feature-7' value='<?php
+				echo $customfeature7;
+				?>'/>
+            </td>
+            <td id='create-bookable-custom-feature-8-input'>
+                <input type='text' id='create-bookable-custom-feature-8' name='custom-feature-8' value='<?php
+				echo $customfeature8;
+				?>'/>
+            </td>
+        </tr>
+
+    </table>
+
+	</td>

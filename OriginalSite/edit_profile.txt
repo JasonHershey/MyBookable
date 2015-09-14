@@ -1,0 +1,91 @@
+﻿<h2>Edit your profile</h2>
+
+<table width="300" border="0" align="left" cellpadding="0" cellspacing="1">
+    <tr>
+        <td>
+            <form enctype=nctype="multipart/form-data" name="update-user-form" method="post" action="updateuser.php">
+                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                    <tr>
+                        <td width="71">First name</td>
+                        <td width="6">:</td>
+                        <td width="301"><?php echo "<input name='fname' type='text' id='fname' value='".$temp_fName."'>"; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Last name</td>
+                        <td>:</td>
+                        <td><?php echo "<input name='lname' type='text' id='lname' value='".$temp_lName."'>"; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><?php echo "<input name='email' type='text' id='email' value='".$temp_eMail."'>"; ?></td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone</td>
+                        <td>:</td>
+                        <td><?php echo "<input name='phone' type='text' id='phone' value='".$temp_phone."'>"; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>:</td>
+                        <td><?php echo "<input name='address' type='text' id='address' value='".$temp_address."'>"; ?></td>
+                    </tr>
+					<tr>
+                        <td>City</td>
+                        <td>:</td>
+                        <td><?php echo "<input name='city' type='text' id='city' value='".$temp_city."'>"; ?></td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td>:</td>
+                        <td><?php echo "<input name='state' type='text' id='state' value='".$temp_state."'>"; ?></td>
+                    </tr>
+					 <tr>
+                        <td>Postal code</td>
+                        <td>:</td>
+                        <td><?php echo "<input name='postalcode' type='text' id='postalcode' value='".$temp_postalCode."'>"; ?></td>
+                    </tr>
+					                    
+					<?php
+                    if ($_SESSION['iserror'])
+                    {
+                    echo "
+                    <tr>
+                        <td colspan='3' align='center'><p>Profile update failed.</p><p>".$_SESSION['errormessage']."</p></td>
+                    </tr>";
+
+                    }
+                    else
+                    {$_SESSION['iserror'] = '0';
+                    }
+                    ?>
+
+                   
+                    <tr>
+                        <td colspan="3" align="center"><input type="submit" name="UpdateUser" value="Update"></td>
+                    </tr>
+
+
+                </table>
+            </form>
+<?php 
+include 'updateuserprofileimage.php';
+?>
+        </td>
+    </tr>
+	<?php
+                    if ($_SESSION['userupdated'])
+                    {
+                    echo "
+                    <tr>
+                        <td colspan='3' align='center'><p>User profile updated successfully.</p></td>
+                    </tr>";
+
+                    }
+                    else
+                    {$_SESSION['userupdated'] = '0';
+                    }
+                    ?>
+</table>
+<p></p>

@@ -1,0 +1,64 @@
+﻿<h2>Create your profile</h2>
+
+<table id='create-user-table'>
+        <tr>
+            <td>
+                <form name="create-user-form" method="post" action="insertuser.php">
+                    <table id='create-user-inner-table'>
+                        <tr>
+                            <td width="71">*First name</td>
+                            <td width="6">:</td>
+                            <td width="301"><input name="fname" type="text" id="fname"></td>
+                           
+                        </tr>
+                        <tr>
+                            <td>*Last name</td>
+                            <td>:</td>
+                            <td><input name="lname" type="text" id="lname"></td>
+                        </tr>
+                        <tr>
+                            <td>*Email</td>
+                            <td>:</td>
+                            <td><input name="email" type="text" id="email"></td>
+                        </tr>
+
+                        <tr>
+                            <td>*Password</td>
+                            <td>:</td>
+                            <td><input name="userpassword" type="text" id="userpassword"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm</td>
+                            <td>:</td>
+                            <td><input name="passwordconfirm" type="text" id="passwordconfirm"></td>
+                        </tr>
+                        <?php
+                        if ($_SESSION['iserror'])
+                        {
+                        echo "
+                        <tr>
+                            <td colspan='3' align='center'><p>All fields must be completed</p><p>".$_SESSION['errormessage']."</p></td>
+                        </tr>";
+
+                        }
+                        else
+                        {$_SESSION['iserror'] = '0';
+                        }
+                        ?>
+
+                        <tr>
+                            <td colspan="3" align="center"><input type="checkbox" name="tosaccept" value="false">I agree to the MySite <a href='tos.php'>Terms of Service</a></input></td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="3" align="center"><input type="submit" name="CreateUser" value="Create"></td>
+                        </tr>
+
+
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+<p></p>

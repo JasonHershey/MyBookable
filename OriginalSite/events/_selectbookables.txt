@@ -1,0 +1,50 @@
+﻿<?php
+include '../common/connection.php';
+$bookablequery = "select id, bookableName from bookables where ownerID='".$_SESSION['userid']."';";
+
+$bookableresults = mysqli_query($conn,$bookablequery);
+
+if (!$bookableresults)
+{
+
+echo $bookablequery;
+echo $boookableresults;
+
+}
+else
+{
+$_SESSION['errormessage'] = !mysqli_error($conn);
+$_SESSION['iserror'] = '0';
+
+
+echo "<select name='bookable-select' id='bookable-select' onchange='addnewbookable(this.value)'>";
+while ($row = mysqli_fetch_array($bookableresults))
+    {
+	if ($eventrow['Bookable ID']==$row['id'])
+	{
+	echo "<option value='".$row['id']." selected'>".$row['bookableName']."</option>";
+	}
+	else
+	{
+	echo "<option value='".$row['id']."'>".$row['bookableName']."</option>";
+
+	}
+    }
+echo "<option value='createbookable'>Add a new bookable...</option>";
+echo "</select>" ;
+}
+?>
+<script type='text/javascript' language='javascript'>
+function addnewbookable(value)
+{
+if (value == 'createbookable')
+{
+window.open('../bookable/createbookable.php');
+}
+else
+{
+//nothing
+}
+}
+
+</script>

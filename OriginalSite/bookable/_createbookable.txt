@@ -1,0 +1,92 @@
+﻿<h2>Create your bookable</h2>
+
+<table id='create-bookable-table'>
+        <tr>
+            <td rowspan='3'>
+                <form enctype="multipart/form-data" name="create-bookable-form" method="post" action="_insertbookable.php"></form>
+                    <table id='create-bookable-inner-table'>
+                        <tr>
+                            <td id='create-bookable-name-label'>*Name</td>
+                            <td id='create-bookable-name-divider'>:</td>
+                            <td id='create-bookable-name-input'><input name="bookablename" type="text" id="bookablename" form='create-bookable-form'></td>
+                           <td id='create-bookable-showinsearch-input' rowspan='4'><input type="checkbox" name="showinsearch" value="true" form='create-bookable-form'>Show in MyBookable.com search</input></td>
+                        </tr>
+                        <tr>
+                            <td id='create-bookable-brand-label'>Brand</td>
+                            <td id='create-bookable-brand-divider'>:</td>
+                            <td id='create-bookable-brand-input'><?php include '_selectbrand.txt' ?></td>
+                        </tr>
+                        <tr>
+                            <td id='create-bookable-location-label'>Location</td>
+                            <td id='create-bookable-location-divider'>:</td>
+                            <td id='create-bookable-location-input'><?php include '_selectlocation.txt' ?></td>
+                        </tr>
+
+                        <tr>
+                            <td id='create-bookable-type-label'>Item type</td>
+                            <td id='create-bookable-type-divider'>:</td>
+                            <td id='create-bookable-type-input' colspan='2'><?php include '_selectitemtype.txt' ?></td>
+                        </tr>
+                        <tr>
+                            <td id='create-bookable-description-label'>Description</td>
+                            <td id='create-bookable-description-divider'>:</td>
+                            <td id='create-bookable-description-input' colspan='2'><textarea name="bookabledescription" id="bookabledescription"></textarea></td>
+                        </tr>
+						
+						<tr>
+                            <?php include '_selectcommonfeatures.txt' ?>
+                        </tr>
+						<tr>
+                            <?php include '_selectcustomfeatures.txt' ?>
+                        </tr>
+                        <tr>
+                            <?php include '_inputsocialmedia.txt' ?>
+                        </tr>
+                       
+					   <?php
+					   if ($_GET['bkblid']!='')
+					   {
+                        echo "<tr>";
+							include '_inputbookingrates.txt';
+						echo "</tr>
+
+						<tr>";
+							include '_inputpaymentoptions.txt';
+						echo "</tr>
+
+                    	<tr>";
+                            include '_editavailability.txt';
+                        echo "</tr>";
+                        }
+						?>
+
+
+                    </table>
+
+            </td>
+			<td rowspan='8' width='30%'><?php include '_addbookableimages.txt' ?> <p>Insert images</p></td>
+			</tr>
+			
+		<tr>
+		</tr>
+		
+ <?php
+                        if ($_SESSION['iserror'])
+                        {
+                        echo "
+                        <tr>
+                            <td colspan='3' align='center'><p>All fields must be completed</p><p>".$_SESSION['errormessage']."</p></td>
+                        </tr>";
+
+                        }
+                        else
+                        {$_SESSION['iserror'] = '0';
+                        }
+                        ?>
+
+   
+	
+	</table>
+ 
+
+<p></p>

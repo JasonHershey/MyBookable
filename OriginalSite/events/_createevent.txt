@@ -1,0 +1,87 @@
+﻿
+<?php
+if ($_GET['eventid']=='')
+{
+echo '<h2>Create event</h2>';
+
+}
+else
+{
+echo '<h2>Edit event: '.$eventrow['Event name'].'</h2>';
+
+}
+?>
+<table id='create-event-table'>
+        <tr>
+            <td rowspan='3'>
+                <form enctype="multipart/form-data" name="create-event-form" method="post" >
+                    <table id='create-event-inner-table'>
+                        <tr>
+                            <td id='create-event-name-label'>* Event Name</td>
+                            <td id='create-event-name-divider'>:</td>
+                            <td id='create-event-name-input'><input name="event-name" type="text" id="event-name" value='<?php echo $eventrow['Event name']; ?>'></td>
+                           
+                        </tr>
+						 <tr>
+                            <td id='create-event-bookable-label'>* Bookable</td>
+                            <td id='create-event-bookable-divider'>:</td>
+                            <td id='create-event-bookable-input'><?php include '_selectbookables.txt'?></td>
+                           
+                        </tr>
+                        <tr>
+						    <td id='create-event-startdate-label'>Start date</td>
+                            <td id='create-event-startdate-divider'>:</td>
+                            <td id='create-event-startdate-input'><input type='text' id='event-start-datepicker' name='event-start-datepicker'/></td>
+                        </tr>
+						<tr>
+						    <td id='create-event-enddate-label'>End date</td>
+                            <td id='create-event-enddate-divider'>:</td>
+                            <td id='create-event-enddate-input'><input type='text' id='event-end-datepicker' name='event-end-datepicker'/></td>
+                        </tr>
+						
+                        <tr>
+                            <td id='create-event-starttime-label'>Start time</td>
+                            <td id='create-event-starttime-divider'>:</td>
+                            <td id='create-event-starttime-input'><input type='time' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='event-start-time' name='event-start-time'/></td>
+                        </tr>
+						<tr>
+                            <td id='create-event-endtime-label'>End time</td>
+                            <td id='create-event-endtime-divider'>:</td>
+                            <td id='create-event-endtime-input'><input type='time' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='event-end-time' name='event-end-time'/></td>
+                        </tr>
+<tr>
+						    <td id='create-event-duration-label'>Event length</td>
+                            <td id='create-event-duration-divider'>:</td>
+                            <td id='create-event-duration-input'><input type='text' id='event-duration' name='event-duration' disabled='true'></input><span id='event-duration-input-label'/></td>
+                        </tr>
+                        <tr>
+                            <td id='create-event-recurrence' colspan='3'>
+							<?php include '_recurrence.txt'?>
+							</td>
+                        </tr>
+                       <tr>
+                            <td colspan="3" align="center"><input type="submit" id='create-event-submit' name="createevent" value="Create event" form='create-event-form'></td>
+                        </tr>
+                        
+
+
+                    </table>
+                </form>
+            </td>
+			</tr>
+			
+	
+   
+	
+	</table>
+<table>
+<tr>
+ <td id='create-rate-table-feedback'></td>
+</tr>
+ </table>
+<p></p>
+
+<script>
+
+
+</script>

@@ -1,0 +1,11 @@
+﻿<td id='create-bookable-availability'>
+<div id='availability-datepicker'></div>
+<input id='create-bookable-availability-input' type='button' value='Edit availability'/>
+</td>
+<script>
+$( '#availability-datepicker' ).datepicker();
+$( '#availability-datepicker' ).datepicker('option', 'disabled', true);
+$( '#create-bookable-availability-input' ).click(function() {window.open('../events/createevent.php?bkblid=<?php echo $_GET['bkblid'];?>', '_new');});
+</script>
+
+

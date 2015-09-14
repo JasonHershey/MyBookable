@@ -1,0 +1,18 @@
+﻿<td id='create-bookable-rates' colspan='3'>
+	<p id='create-bookable-rates-label'>Booking rates:</p>
+
+	<table id='create-bookable-rate-input-table'>
+	<tr><td><?php include '_viewrates.txt'; ?></td></tr>
+	<tr><td>
+		<button id='create-rate-submit' name='Addrate'>Add rate</button>
+	</td></tr>
+	</table>
+</td>
+
+
+<script>
+$('#create-rate-submit').click(function(){
+window.open('../rate/createrate.php');
+
+});
+</script>

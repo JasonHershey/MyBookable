@@ -1,0 +1,21 @@
+﻿	<table id='create-rate-dates-input-table'>
+        <tr>
+            <td id='create-rate-dates-input-table-header-start'>
+                Start
+            </td>
+            <td id='create-rate-datess-input-table-header-end'>
+                End
+            </td>
+        
+		</tr>
+        <tr>
+            <td id='create-rate-dates-input-table-start'>
+                <input type='date' id='create-rate-start-date' name='create-rate-start-date' value='<?php echo $raterow['startDate']; ?>' />
+            </td>
+            <td id='create-rate-dates-input-table-end'>
+                <input type='date' id='create-rate-end-date' name='create-rate-end-date' value='<?php echo $raterow['endDate']; ?>' />
+            </td>
+         </tr>
+        
+
+    </table>

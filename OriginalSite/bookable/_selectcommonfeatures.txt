@@ -1,0 +1,95 @@
+﻿<?php include '_getcommonfeatures.php' ?>
+
+<td id='create-bookable-common-features-place' colspan='4'>
+	<p id='create-bookable-common-features-place-label'>Common features for places</p>
+	  <table id='create-bookable-common-features-place-input-table'>
+        <tr>
+            <td id='create-bookable-common-features-place-nonsmoking-input'>
+                <input type='radio' id='create-bookable-common-features-place-nonsmoking' name='common-place-nonsmoking' value='checked' 
+				<?php
+				echo $place_non_smoking;
+				?>/>
+				Non-smoking
+            </td>
+            <td id='create-bookable-common-features-place-wifi-input'>
+                <input type='radio' id='create-bookable-common-features-place-wifi' name='common-place-wifi' value='checked' <?php
+				echo $place_wifi_available;
+				?>/>Wifi available
+            </td>
+            <td id='create-bookable-common-features-place-capacity-input'>
+                Capacity: <input type='text' id='create-bookable-common-features-place-capacity' name='common-place-capacity' size='6' value='<?php
+				echo $place_capacity;
+				?>' />
+            </td>
+        </tr>
+        <tr>
+            <td id='create-bookable-common-features-place-ada-input'>
+                <input type='radio' id='create-bookable-common-features-place-ada' name='common-place-ada' value='checked' <?php
+				echo $place_ada_accessible;
+				?>/>ADA Accessible
+            </td>
+            <td id='create-bookable-common-features-place-insurance-input'>
+                <input type='radio' id='create-bookable-common-features-place-insurance' name='common-place-insurance' value='checked' <?php
+				echo $place_non_smoking;
+				?>/>Insurance required
+            </td>
+            <td id='create-bookable-common-features-place-size-input'>
+                Size: <input type='text' id='create-bookable-common-features-place-size' name='common-place-size' size='6' value='<?php
+				echo $place_size;
+				?>'/>
+            </td>
+
+        </tr>
+    </table>
+</td>
+
+<td id='create-bookable-common-features-person' colspan='4'>
+	<p id='create-bookable-common-features-person-label'>Common features for people</p>
+	<table id='create-bookable-common-features-person-input-table'>
+        <tr>
+            <td id='create-bookable-common-features-person-trainer-input'>
+                <input type='radio' id='create-bookable-common-features-person-trainer' name='common-person-trainer' value='checked' <?php
+				echo $person_trainer;
+				?>/>Trainer
+            </td>
+            <td id='create-bookable-common-features-person-entertainer-input'>
+                <input type='radio' id='create-bookable-common-features-person-entertainer' name='common-person-entertainer' value='checked' <?php
+				echo $person_entertainer;
+				?>/>Entertainer
+            </td>
+            <td id='create-bookable-common-features-person-therapist-input'>
+                <input type='radio' id='create-bookable-common-features-person-therapist' name='common-person-therapist' value='checked' <?php
+				echo $person_therapist;
+				?>/>Health/Therapist
+            </td>
+        </tr>
+      
+    </table>
+	
+</td>
+
+<td id='create-bookable-common-features-other' colspan='4'>
+	<p id='create-bookable-common-features-other-label'>Common features for other things</p>
+	  <table id='create-bookable-common-features-other-input-table'>
+        <tr>
+            <td id='create-bookable-common-features-other-tools-input'>
+                <input type='radio' id='create-bookable-common-features-other-tools' name='common-other-tools' value='checked' <?php
+				echo $person_therapist;
+				?>/>Tools/Equipment
+            </td>
+            <td id='create-bookable-common-features-other-ip-input'>
+                <input type='radio' id='create-bookable-common-features-other-ip' name='common-other-ip' value='checked' <?php
+				echo $person_therapist;
+				?>/>Intellectual property
+            </td>
+            <td id='create-bookable-common-features-other-vehicle-input'>
+                <input type='radio' id='create-bookable-common-features-other-vehicle' name='common-other-vehicle' value='checked' <?php
+				echo $person_therapist;
+				?>/>Vehicle
+            </td>
+        </tr>
+      
+    </table>
+	
+</td>
+

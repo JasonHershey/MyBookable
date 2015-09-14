@@ -1,0 +1,20 @@
+<h2><?php echo $_SESSION['username']."'s Allowed Payment Options"; ?></h2>
+ <table id='view-apo-table'>
+ <tr id='view-apo-table-header'>
+	<th>Allowed Payment Option Name</th>
+	<th>New customer default</th>
+	<th>Assigned bookable</th>
+	<th>Type</th>
+	<th>Config</th>
+</tr>
+
+<?php
+while ($row = mysqli_fetch_array($aporesults))
+{
+echo "<tr><td><a href='createapo.php?apoid=".$row['APO ID']."'>".$row['APO Name']."</a></td><td>".$row['Customer Default']."</td><td><a href='../bookable/viewbookable.php?bkblid=".$row['Bookable ID']."'>".$row['Bookable Name']."</a></td><td>".$row['Payment Type Name']."</td><td>".$row['APO Config']."</td></tr>";
+}
+?>
+</table>
+
+</body>
+</html>

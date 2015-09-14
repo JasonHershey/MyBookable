@@ -1,0 +1,13 @@
+﻿<input type='range' id='create-rate-minimum-input' name="rateminimuminput" min='0' max='4' step='1' value='<?php echo $raterow['minimumPeriods']; ?>'/>
+<span id='create-rate-minimum-input-label'>
+<?php 
+if ($raterow['periodTypes_id']=='')
+{
+echo 'hours'; 
+}
+else
+{
+echo $raterow['periodTypename'].'s'; 
+}
+?>
+</span>

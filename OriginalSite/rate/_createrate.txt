@@ -1,0 +1,74 @@
+﻿<h2>Add a rate</h2>
+
+<table id='create-rate-table'>
+        <tr>
+            <td rowspan='3'>
+                <form enctype="multipart/form-data" name="create-rate-form" method="post">
+                    <table id='create-rate-inner-table'>
+                        <tr>
+                            <td id='create-rate-name-label'>*Name</td>
+                            <td id='create-rate-name-divider'>:</td>
+                            <td id='create-rate-name-input'><input name="rate-name" type="text" id="rate-name"></td>
+                           
+                        </tr>
+                        <tr>
+						    <td id='create-rate-bookable-label'>*Bookable</td>
+                            <td id='create-rate-bookable-divider'>:</td>
+                            <td id='create-rate-bookable-input'><?php include '_selectbookables.txt' ?></td>
+                        </tr>
+                        <tr>
+                            <td id='create-rate-description-label'>Description</td>
+                            <td id='create-rate-description-divider'>:</td>
+                            <td id='create-rate-description-input'><textarea name="ratedescription" id="ratedescription"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td id='create-rate-rate-label'>Rate</td>
+                            <td id='create-rate-rate-divider'>:</td>
+                            <td id='create-rate-rate-input'><input name='rate-input' type='number' min='0' step='.01' max='100000' id='rate-input' /></td>
+                        </tr>
+                        <tr>
+                            <td id='create-rate-period-label'>Rate period</td>
+                            <td id='create-rate-period-divider'>:</td>
+                            <td id='create-rate-period-input'><?php include '_selectperiod.txt' ?></td>
+                        </tr>
+						<tr>
+                            <td id='create-rate-minimum-label'>Minimum periods</td>
+                            <td id='create-rate-minimum-divider'>:</td>
+                            <td id='create-rate-minimum-input'><?php include '_selectminimum.txt' ?></td>
+                        </tr>
+						<tr>
+                            <td id='create-rate-hours-description' colspan='3'><span id='create-rate-hours-description-label'>Hours:</span> Enter the start and end times for the rate each day. If you have multiple rates defined for the same time, the higher rate will apply.</td>
+                        </tr>
+						<tr>
+                            <td id='create-rate-hours-input'><?php include '_inputhours.txt' ?></td>
+                        </tr>
+
+						<tr>
+                            <td id='create-rate-dates-description' colspan='3'><span id='create-rate-dates-description-label'>Applicable dates:</span> Enter the start and end dates for when the rate will apply.</td>
+                        </tr>
+						<tr>
+                            <td id='create-rate-dates-input'><?php include '_inputdates.txt' ?></td>
+                        </tr>
+						
+						 <tr>
+                            <td colspan="3" align="center"><input type="submit" id='create-rate-submit' name="Createrate" value="Create rate" form='create-rate-form'></td>
+                        </tr>
+                        
+
+
+                    </table>
+                </form>
+            </td>
+			</tr>
+			
+	
+   
+	
+	</table>
+<table>
+<tr>
+ <td id='create-rate-table-feedback'></td>
+</tr>
+ </table>
+<p></p>

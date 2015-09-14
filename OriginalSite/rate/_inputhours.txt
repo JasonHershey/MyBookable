@@ -1,0 +1,79 @@
+﻿	<table id='create-rate-hours-input-table'>
+        <tr>
+            <td id='create-rate-hours-input-table-empty'>
+            </td>
+            <td id='create-rate-hours-input-table-header-start'>
+                Start
+            </td>
+            <td id='create-rate-hours-input-table-header-end'>
+                End
+            </td>
+        
+		</tr>
+        <tr>
+            <td id='create-rate-hours-input-table-label-mondays'>Mondays</td>
+			<td id='create-rate-hours-input-table-start-mondays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-start-mondays' name='create-rate-start-mondays' value='<?php echo $raterow['monStart']; ?>' />
+				
+            </td>
+            <td id='create-rate-hours-input-table-end-mondays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-end-mondays' name='create-rate-end-mondays' value='<?php echo $raterow['monEnd']; ?>' />
+            </td>
+         </tr>
+        <tr>
+            <td id='create-rate-hours-input-table-label-tuesdays'>Tuesdays</td>
+			<td id='create-rate-hours-input-table-start-tuesdays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-start-tuesdays' name='create-rate-start-tuesdays' value='<?php echo $raterow['tueStart']; ?>' />
+            </td>
+            <td id='create-rate-hours-input-table-end-tuesdays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-end-tuesdays' name='create-rate-end-tuesdays' value='<?php echo $raterow['tueEnd']; ?>' />
+            </td>
+         </tr>
+		 <tr>
+            <td id='create-rate-hours-input-table-label-wednesdays'>Wednesday</td>
+			<td id='create-rate-hours-input-table-start-wednesdays'>
+                <input type='text' ppattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-start-wednesdays' name='create-rate-start-wednesdays' value='<?php echo $raterow['wedStart']; ?>' />
+            </td>
+            <td id='create-rate-hours-input-table-end-wednesdays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-end-wednesdays' name='create-rate-end-wednesdays' value='<?php echo $raterow['wedEnd']; ?>' />
+            </td>
+         </tr>
+		 <tr>
+            <td id='create-rate-hours-input-table-label-thursdays'>Thursdays</td>
+			<td id='create-rate-hours-input-table-start-thursdays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-start-thursdays' name='create-rate-start-thursdays' value='<?php echo $raterow['thuStart']; ?>' />
+            </td>
+            <td id='create-rate-hours-input-table-end-thursdays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-end-thursdays' name='create-rate-end-thursdays' value='<?php echo $raterow['thuEnd']; ?>' />
+            </td>
+         </tr>
+		 <tr>
+            <td id='create-rate-hours-input-table-label-fridays'>Fridays</td>
+			<td id='create-rate-hours-input-table-start-fridays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-start-fridays' name='create-rate-start-fridays' value='<?php echo $raterow['friStart']; ?>' />
+            </td>
+            <td id='create-rate-hours-input-table-end-fridays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-end-fridays' name='create-rate-end-fridays' value='<?php echo $raterow['friEnd']; ?>' />
+            </td>
+         </tr>
+		 <tr>
+            <td id='create-rate-hours-input-table-label-saturdays'>Saturdays</td>
+			<td id='create-rate-hours-input-table-start-saturdays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-start-saturdays' name='create-rate-start-saturdays' value='<?php echo $raterow['satStart']; ?>' />
+            </td>
+            <td id='create-rate-hours-input-table-end-saturdays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-end-saturdays' name='create-rate-end-saturdays' value='<?php echo $raterow['satEnd']; ?>' />
+            </td>
+         </tr>
+		 <tr>
+            <td id='create-rate-hours-input-table-label-sundays'>Sundays</td>
+			<td id='create-rate-hours-input-table-start-sundays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-start-sundays' name='create-rate-start-sundays' value='<?php echo $raterow['sunStart']; ?>' />
+            </td>
+            <td id='create-rate-hours-input-table-end-sundays'>
+                <input type='text' pattern='^(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?$' placeholder='00:00-23:59' id='create-rate-end-sundays' name='create-rate-end-sundays' value='<?php echo $raterow['sunEnd']; ?>' />
+            </td>
+         </tr>
+
+    </table>
+

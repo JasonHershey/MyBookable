@@ -1,0 +1,95 @@
+﻿<h2>Create your brand</h2>
+
+<table id='create-brand-table'>
+        <tr>
+            <td rowspan='3'>
+                <form enctype="multipart/form-data" name="create-brand-form" method="post" action="_insertbrand.php">
+                    <table id='create-user-inner-table'>
+                        <tr>
+                            <td width="71">*Name</td>
+                            <td width="6">:</td>
+                            <td width="301"><input name="brandname" type="text" id="brandname"></td>
+                           
+                        </tr>
+                        <tr>
+                            <td>Tagline</td>
+                            <td>:</td>
+                            <td><input name="tagline" type="text" id="tagline"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td><input name="email" type="text" id="email"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Address</td>
+                            <td>:</td>
+                            <td><input name="address" type="text" id="address"></td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>:</td>
+                            <td><input name="city" type="text" id="city"></td>
+                        </tr>
+						<tr>
+                            <td>State</td>
+                            <td>:</td>
+                            <td><?php include '../common/_stateselect.txt' ?></td>
+                        </tr>
+						<tr>
+                            <td>Zip</td>
+                            <td>:</td>
+                            <td><input name="postalcode" type="text" id="postalcode"></td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>:</td>
+                            <td><input name="phone" type="text" id="phone"></td>
+                        </tr>
+                        <tr>
+                            <td>Fax</td>
+                            <td>:</td>
+                            <td><input name="fax" type="text" id="fax"></td>
+                        </tr>
+                        
+						<?php include '_updatebrandprofileimage.php' ?>
+
+
+                        <tr>
+                            <td colspan="3" align="center"><input type="checkbox" name="showbrand" value="false">Show branding on my bookables</input></td>
+                        </tr>
+
+						 <tr>
+                            <td colspan="3" align="center"><input type="submit" name="Createbrand" value="Create brand" form='create-brand-form'></td>
+                        </tr>
+                        
+
+
+                    </table>
+                </form>
+            </td>
+			</tr>
+			
+		<tr>
+		
+ <?php
+                        if ($_SESSION['iserror'])
+                        {
+                        echo "
+                        <tr>
+                            <td colspan='3' align='center'><p>All fields must be completed</p><p>".$_SESSION['errormessage']."</p></td>
+                        </tr>";
+
+                        }
+                        else
+                        {$_SESSION['iserror'] = '0';
+                        }
+                        ?>
+
+   
+	
+	</table>
+ 
+
+<p></p>

@@ -1,0 +1,50 @@
+﻿<?php
+
+include '../common/connection.php';
+$brandquery = "select id, brandName from brands where ownerID='".$_SESSION['userid']."';";
+
+$brandresults = mysqli_query($conn,$brandquery);
+
+if (!$brandresults)
+{
+
+echo $brandquery;
+echo $brandresults;
+
+}
+else
+{
+$_SESSION['errormessage'] = !mysqli_error($conn);
+$_SESSION['iserror'] = '0';
+
+
+echo "<select name='brandselect' id='brandselect' form='create-bookable-form' onchange='addnewbrand(this.value)'>";
+while ($row = mysqli_fetch_array($brandresults))
+    {
+	if ($row['ID']==$bkbl_row['id'])
+	{
+	echo "<option value='".$row['ID']."' selected>".$row['brandName']."</option>";
+	}
+	else
+	{
+	echo "<option value='".$row['ID']."'>".$row['brandName']."</option>";
+	}
+    }
+echo "<option value='createbrand'>Add a brand...</option>";
+echo "</select>" ;
+}
+?>
+<script type='text/javascript' language='javascript'>
+function addnewbrand(value)
+{
+if (value == 'createbrand')
+{
+window.open('../brand/createbrand.php');
+}
+else
+{
+//nothing
+}
+}
+
+</script>

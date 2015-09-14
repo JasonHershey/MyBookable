@@ -1,0 +1,59 @@
+﻿<?php
+
+switch($raterow['periodTypes_id'])
+{
+case '02b5a237-3a73-11e5-9c9b-549f350764bc':
+echo "
+<input type='radio' id='create-rate-period-input-quarter' name='rateperiodinput' onchange='updateperiods(this)' value='1' checked/><span id='create-rate-period-input-quarter-label'>1/4 hour</span>
+<input type='radio' id='create-rate-period-input-half' name='rateperiodinput' onchange='updateperiods(this)' value='2'/><span id='create-rate-period-input-half-label'>1/2 hour</span>
+<input type='radio' id='create-rate-period-input-hour' name='rateperiodinput' onchange='updateperiods(this)' value='3'/><span id='create-rate-period-input-hour-label'>hour</span>
+<input type='radio' id='create-rate-period-input-day' name='rateperiodinput' onchange='updateperiods(this)' value='4'/><span id='create-rate-period-input-day-label'>days</span>
+<input type='radio' id='create-rate-period-input-week' name='rateperiodinput' onchange='updateperiods(this)' value='5'/><span id='create-rate-period-input-week-label'>weeks</span>
+";
+break;
+case '0981be01-3a73-11e5-9c9b-549f350764bc':
+echo "
+<input type='radio' id='create-rate-period-input-quarter' name='rateperiodinput' onchange='updateperiods(this)' value='1' /><span id='create-rate-period-input-quarter-label'>1/4 hour</span>
+<input type='radio' id='create-rate-period-input-half' name='rateperiodinput' onchange='updateperiods(this)' value='2' checked/><span id='create-rate-period-input-half-label'>1/2 hour</span>
+<input type='radio' id='create-rate-period-input-hour' name='rateperiodinput' onchange='updateperiods(this)' value='3'/><span id='create-rate-period-input-hour-label'>hour</span>
+<input type='radio' id='create-rate-period-input-day' name='rateperiodinput' onchange='updateperiods(this)' value='4'/><span id='create-rate-period-input-day-label'>days</span>
+<input type='radio' id='create-rate-period-input-week' name='rateperiodinput' onchange='updateperiods(this)' value='5'/><span id='create-rate-period-input-week-label'>weeks</span>
+";
+break;
+case 'bd5a2289-3a72-11e5-9c9b-549f350764bc':
+echo "
+<input type='radio' id='create-rate-period-input-quarter' name='rateperiodinput' onchange='updateperiods(this)' value='1' /><span id='create-rate-period-input-quarter-label'>1/4 hour</span>
+<input type='radio' id='create-rate-period-input-half' name='rateperiodinput' onchange='updateperiods(this)' value='2'/><span id='create-rate-period-input-half-label'>1/2 hour</span>
+<input type='radio' id='create-rate-period-input-hour' name='rateperiodinput' onchange='updateperiods(this)' value='3' checked/><span id='create-rate-period-input-hour-label'>hour</span>
+<input type='radio' id='create-rate-period-input-day' name='rateperiodinput' onchange='updateperiods(this)' value='4'/><span id='create-rate-period-input-day-label'>days</span>
+<input type='radio' id='create-rate-period-input-week' name='rateperiodinput' onchange='updateperiods(this)' value='5'/><span id='create-rate-period-input-week-label'>weeks</span>
+";
+break;
+case 'f9369f9a-3a72-11e5-9c9b-549f350764bc':
+echo "
+<input type='radio' id='create-rate-period-input-quarter' name='rateperiodinput' onchange='updateperiods(this)' value='1' /><span id='create-rate-period-input-quarter-label'>1/4 hour</span>
+<input type='radio' id='create-rate-period-input-half' name='rateperiodinput' onchange='updateperiods(this)' value='2'/><span id='create-rate-period-input-half-label'>1/2 hour</span>
+<input type='radio' id='create-rate-period-input-hour' name='rateperiodinput' onchange='updateperiods(this)' value='3'/><span id='create-rate-period-input-hour-label'>hour</span>
+<input type='radio' id='create-rate-period-input-day' name='rateperiodinput' onchange='updateperiods(this)' value='4' checked/><span id='create-rate-period-input-day-label'>days</span>
+<input type='radio' id='create-rate-period-input-week' name='rateperiodinput' onchange='updateperiods(this)' value='5'/><span id='create-rate-period-input-week-label'>weeks</span>
+";
+break;
+case 'fd4b0541-3a72-11e5-9c9b-549f350764bc':
+echo "
+<input type='radio' id='create-rate-period-input-quarter' name='rateperiodinput' onchange='updateperiods(this)' value='1' /><span id='create-rate-period-input-quarter-label'>1/4 hour</span>
+<input type='radio' id='create-rate-period-input-half' name='rateperiodinput' onchange='updateperiods(this)' value='2'/><span id='create-rate-period-input-half-label'>1/2 hour</span>
+<input type='radio' id='create-rate-period-input-hour' name='rateperiodinput' onchange='updateperiods(this)' value='3'/><span id='create-rate-period-input-hour-label'>hour</span>
+<input type='radio' id='create-rate-period-input-day' name='rateperiodinput' onchange='updateperiods(this)' value='4'/><span id='create-rate-period-input-day-label'>days</span>
+<input type='radio' id='create-rate-period-input-week' name='rateperiodinput' onchange='updateperiods(this)' value='5' checked/><span id='create-rate-period-input-week-label'>weeks</span>
+";
+break;
+default:
+echo "
+<input type='radio' id='create-rate-period-input-quarter' name='rateperiodinput' onchange='updateperiods(this)' value='1' /><span id='create-rate-period-input-quarter-label'>1/4 hour</span>
+<input type='radio' id='create-rate-period-input-half' name='rateperiodinput' onchange='updateperiods(this)' value='2'/><span id='create-rate-period-input-half-label'>1/2 hour</span>
+<input type='radio' id='create-rate-period-input-hour' name='rateperiodinput' onchange='updateperiods(this)' value='3' checked/><span id='create-rate-period-input-hour-label'>hour</span>
+<input type='radio' id='create-rate-period-input-day' name='rateperiodinput' onchange='updateperiods(this)' value='4'/><span id='create-rate-period-input-day-label'>days</span>
+<input type='radio' id='create-rate-period-input-week' name='rateperiodinput' onchange='updateperiods(this)' value='5'/><span id='create-rate-period-input-week-label'>weeks</span>
+";
+}
+

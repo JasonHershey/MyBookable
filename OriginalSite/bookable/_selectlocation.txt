@@ -1,0 +1,50 @@
+﻿<?php
+
+$locationquery = "select id, locationName from locations where owner_id='".$_SESSION['userid']."';";
+
+$locationresults = mysqli_query($conn,$locationquery);
+
+if (!$locationresults)
+{
+
+echo $locationquery;
+echo $locationresults;
+
+}
+else
+{
+$_SESSION['errormessage'] = !mysqli_error($conn);
+$_SESSION['iserror'] = '0';
+
+
+echo "<select name='locationselect' id='locationselect' form='create-bookable-form' onchange='addnewlocation(this.value)'>";
+while ($row = mysqli_fetch_array($locationresults))
+    {
+	if ($row['ID']==$bkbl_row['location_id'])
+	{
+	echo "<option value='".$row['ID']."' selected>".$row['locationName']."</option>";
+	}
+	else
+	{
+	echo "<option value='".$row['ID']."'>".$row['locationName']."</option>";
+	}
+		
+    }
+echo "<option value='createlocation'>Add a location...</option>";
+echo "</select>" ;
+}
+?>
+<script type='text/javascript' language='javascript'>
+function addnewlocation(value)
+{
+if (value == 'createlocation')
+{
+window.open('../location/createlocation.php');
+}
+else
+{
+//nothing
+}
+}
+
+</script>

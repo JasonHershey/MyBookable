@@ -1,0 +1,16 @@
+ <?php include '_getapos.php';?>
+ <table id='view-apo-table'>
+ <tr id='view-apo-table-header'>
+	<th>Allowed Payment Option Name</th>
+</tr>
+
+<?php
+while ($row = mysqli_fetch_array($aporesults))
+{
+echo "<tr><td><a href='../apo/createapo.php?apoid=".$row['APO ID']."'>".$row['APO Name']."</a></td></tr>";
+}
+?>
+</table>
+
+</body>
+</html>

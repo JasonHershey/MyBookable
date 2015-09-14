@@ -1,0 +1,62 @@
+﻿<h2>Edit Allowed Payment Option: <?php echo $aporow['APO Name']; ?></h2>
+
+<table id='edit-apo-table'>
+        <tr>
+            <td rowspan='3'>
+
+			<form enctype="multipart/form-data" name="create-apo-form" method="post">
+                    <table id='create-apo-inner-table'>
+                        <tr>
+                            <td id='create-apo-name-label'>*Name</td>
+                            <td id='create-apo-name-divider'>:</td>
+                            <td id='create-apo-name-input'><input name="apo-name" type="text" id="apo-name" value='<?php echo $aporow['APO Name']; ?>'></td>
+                           
+                        </tr>
+                        <tr>
+						    <td id='create-apo-bookable-label'>*Bookable</td>
+                            <td id='create-apo-bookable-divider'>:</td>
+                            <td id='create-apo-bookable-input'><?php include '_selectbookables.txt' ?></td>
+                        </tr>
+                        <tr>
+                            <td id='create-apo-description-label'>Description</td>
+                            <td id='create-apo-description-divider'>:</td>
+                            <td id='create-apo-description-input'><textarea name="apo-description" id="apo-description"><?php echo $aporow['Description']; ?></textarea></td>
+                        </tr>
+						<tr>
+                            <td id='create-apo-period-label'>Payment type</td>
+                            <td id='create-apo-period-divider'>:</td>
+                            <td id='create-apo-period-input'><?php include '_select-payopt-type.txt' ?></td>
+                        </tr>
+						<tr>
+						<td id='create-apo-configuration-label'>Payment configuration</td>
+                            <td id='create-apo-configuration-divider'>:</td>
+                            <td id='create-apo-configuration-input'><input name="apo-configuration" type="text" id="apo-configuration" value='<?php echo $aporow['APO Config']; ?>'></td>
+                        </tr>
+						<tr>
+                            <td id='create-apo-default-input' colspan='3'><input name="apo-default" type="checkbox" id="apo-default" <?php if ($aporow['Customer Default']=='True'){echo 'checked';} ?>/>Make default for new customers</td>
+                        </tr>
+						
+						 <tr>
+                            <td colspan="3" align="center"><input type="submit" id='create-apo-submit' name="edit-apo" value="Edit payment option" form='edit-apo-form'></td>
+                        </tr>
+                        
+
+
+                    </table>
+                </form>
+
+
+                
+            </td>
+			</tr>
+			
+	
+   
+	
+	</table>
+<table>
+<tr>
+ <td id='create-table-feedback'></td>
+</tr>
+ </table>
+<p></p>

@@ -1,0 +1,116 @@
+<table id='view-bookable-table'>
+<tr>
+<td colspan='2'><h2><?php echo $temp_bookablename; ?></h2></td>
+		<td rowspan='8' width='30%'><?php include '_showbookableimages.php' ?><p>Show images</p></td>
+</tr>
+
+<tr>
+<td><h3>Address</h3></td>
+<td>
+		<?php echo $temp_locationaddress; ?>
+		<br/>
+		<?php echo $temp_locationcity.", ".$temp_locationstate." ".$temp_locationpostalcode." ".$temp_locationcountry; ?>
+		<br/>
+		<?php echo "Phone: ".$temp_phone.", Email: ".$temp_email; ?>
+</td>
+</tr>
+
+<tr>
+	<td><h3>Description</h3></td>
+	<td>
+		<?php echo $temp_description; ?>
+	</td>
+</tr>
+
+<tr>
+<td colspan='2'><h3>Features:</h3</td>
+</tr>
+<tr>
+<td colspan='2'>Insert list here </td>
+</tr>
+
+<tr>
+<td colspan='2'>Insert social links</td>
+</tr>
+
+<tr>
+<td colspan='2'><h3>Booking rates:</h3></td>
+</tr>
+<tr>
+<td colspan='2'>Insert rates</td>
+</tr>
+
+<tr>
+<td colspan='2'><h3>Scheduling:</h3></td>
+	<td rowspan='4'>Insert calendar</td>
+</tr>
+<tr>
+<td colspan='2'>Insert scheduling</td>
+</tr>
+
+<tr>
+<td colspan='2'>Insert scheduling buttons</td>
+</tr>
+<tr>
+<td colspan='2'>Insert book it button</td>
+</tr>
+
+
+
+</table>
+
+<?php
+
+if ($temp_brandaddbrand)
+{
+echo "<table id='view-brand-footer'>
+ <tr>
+	<td width='200px'>";
+if ($temp_profileimage!='')
+{
+echo "<img width='100%' src='".str_replace('/home/mybookab/public_html','',$temp_brandimage)."' />";
+}
+
+echo "</td>
+
+<td>
+<table>
+<tr>
+	<td><b>Address</b></td>
+</tr>
+<tr>
+	<td>";
+		echo $temp_brandaddress;
+	echo "	<br/>";
+		echo $temp_brandcity.", ".$temp_brandstate." ".$temp_brandpostalcode;
+		echo "<br/>
+	</td>
+ </tr>
+</table>
+</td> 
+ 
+ <td>
+ <table>
+ <tr>
+	<td><b>Contact:</b></td>
+</tr>
+<tr>
+	<td>";
+		 echo $temp_brandemail; 
+		echo "<br/>";
+		echo "Phone: ".$temp_brandphone;
+		echo "<br/>";
+		echo "Fax: ".$temp_brandfax;
+		echo "<br/>
+	</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+</table>";
+
+}
+?>
+
+</body>
+</html>

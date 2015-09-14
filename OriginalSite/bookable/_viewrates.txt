@@ -1,0 +1,10 @@
+<?php include '_getrates.php';?>
+	<table id='view-rates-table'>
+<?php
+while ($row = mysqli_fetch_array($rateresults))
+{
+echo "<tr><td><a href='createrate.php?rateid=".$row['id']."'>".$row['rateName']."</a></td><td>".$row['amount']."/".$row['periodTypename']."</td></tr>";
+}
+?>
+	</table>
+

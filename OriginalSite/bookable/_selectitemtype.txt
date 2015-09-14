@@ -1,0 +1,58 @@
+﻿<script type='text/javascript' language='javascript'>
+function showfeatures(selectedRadio)
+{
+
+switch (selectedRadio.value)
+	{
+	case '6717324c-2b92-11e5-9c9b-549f350764bc':
+	document.getElementById('create-bookable-common-features-place').style.display='block';
+	document.getElementById('create-bookable-common-features-person').style.display='none';
+	document.getElementById('create-bookable-common-features-other').style.display='none';
+	break;
+	
+	case 'fbbf3e6c-40ae-11e5-be05-549f350764bc':
+	document.getElementById('create-bookable-common-features-place').style.display='none';
+	document.getElementById('create-bookable-common-features-person').style.display='block';
+	document.getElementById('create-bookable-common-features-other').style.display='none';
+	break;
+	
+	case '1d3c9cca-40b0-11e5-be05-549f350764bc':
+	document.getElementById('create-bookable-common-features-place').style.display='none';
+	document.getElementById('create-bookable-common-features-person').style.display='none';
+	document.getElementById('create-bookable-common-features-other').style.display='block';
+	break;
+	
+	default:
+	document.getElementById('create-bookable-common-features-place').style.display='none';
+	document.getElementById('create-bookable-common-features-person').style.display='none';
+	document.getElementById('create-bookable-common-features-other').style.display='block';
+	break;
+	}
+}
+
+
+</script>
+
+<input type='radio' id='create-bookable-type-input-place' name="itemtype" onchange='showfeatures(this)' value='6717324c-2b92-11e5-9c9b-549f350764bc'>Place</input>
+<input type='radio' id='create-bookable-type-input-person' name='itemtype' onchange='showfeatures(this)' value='fbbf3e6c-40ae-11e5-be05-549f350764bc'>Person</input>
+<input type='radio' id='create-bookable-type-input-other' name='itemtype' onchange='showfeatures(this)' value='1d3c9cca-40b0-11e5-be05-549f350764bc'>Thing</input>
+
+<?php
+switch($bkbl_row['typename'])
+{
+case 'person':
+echo "<script> $('input:radio[id=create-bookable-type-input-person]').prop('checked', true); $(document).ready(function() {showfeatures(document.getElementById('create-bookable-type-input-person'));});</script>";
+break;
+case 'place':
+echo "<script>$('input:radio[id=create-bookable-type-input-place]').prop('checked', true);$(document).ready(function() {showfeatures(document.getElementById('create-bookable-type-input-place'));});</script>";
+break;
+case 'thing':
+echo "<script>$('input:radio[id=create-bookable-type-input-thing]').prop('checked', true);$(document).ready(function() {showfeatures(document.getElementById('create-bookable-type-input-thing'));});</script>";
+break;
+default:
+echo "<script>$('input:radio[id=create-bookable-type-input-place]').prop('checked', true);$(document).ready(function() {showfeatures(document.getElementById('create-bookable-type-input-place'));});</script>";
+break;
+}
+?>
+
+

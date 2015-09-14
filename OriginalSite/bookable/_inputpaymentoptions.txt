@@ -1,0 +1,18 @@
+﻿<td id='create-bookable-apos' colspan='3'>
+	<p id='create-bookable-apos-label'>Payment options:</p>
+
+	<table id='create-bookable-apo-input-table'>
+	<tr><td><?php include '_viewapos.txt'; ?></td></tr>
+	<tr><td>
+		<button id='create-apo-submit' name='Addapo'>Add option</button>
+	</td></tr>
+	</table>
+</td>
+
+
+<script>
+$('#create-apo-submit').click(function(){
+window.open('../apo/createapo.php');
+
+});
+</script>

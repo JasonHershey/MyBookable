@@ -1,0 +1,23 @@
+<h2><?php echo $_SESSION['username']."'s rates"; ?></h2>
+ <table id='view-rates-table'>
+ <tr id='view-rates-table-header'>
+	<th>Rate name</th>
+	<th>Assigned bookable</th>
+	<th>Amount</th>
+	<th></th>
+	<th>Billing period</th>
+	<th>Start date</th>
+	<th>End date</th>
+	<th>Edit</th>
+</tr>
+
+<?php
+while ($row = mysqli_fetch_array($rateresults))
+{
+echo "<tr><td><a href='createrate.php?rateid=".$row['id']."'>".$row['rateName']."</a></td><td><a href='../bookable/viewbookable.php?bkblid=".$row['bookables_id']."'>".$row['bookableName']."</a></td></td><td>".$row['amount']."</td><td>per</td><td>".$row['periodTypename']."</td><td>".$row['startDate']."</td><td>".$row['endDate']."</td></tr>";
+}
+?>
+</table>
+
+</body>
+</html>

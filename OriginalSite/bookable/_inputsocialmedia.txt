@@ -1,0 +1,68 @@
+﻿<?php include '_getsociallinks.php' ?>
+
+<td id='create-bookable-social-media' colspan='4'>
+	<p id='create-bookable-social-media-label'>Social media</p>
+
+	<table id='create-bookable-social-media-input-table'>
+        <tr>
+            <td id='create-bookable-social-media-facebook-label'>
+                Facebook
+            </td>
+			<td id='create-bookable-social-media-facebook-divider'>:</td>
+            <td id='create-bookable-social-media-facebook-input'>
+                <input type='text' id='create-bookable-social-media-facebook' name='social-media-facebook' value='<?php
+				echo $facebook_link;
+				?>'/>
+            </td>
+        </tr>
+        <tr>
+            <td id='create-bookable-social-media-linkedin-label'>
+                LinkedIn
+            </td>
+			<td id='create-bookable-social-media-linkedin-divider'>:</td>
+            <td id='create-bookable-social-media-linkedin-input'>
+                <input type='text' id='create-bookable-social-media-linkedin' name='social-media-linkedin' value='<?php
+				echo $linkedin_link;
+				?>'/>
+            </td>
+        </tr>
+
+		<tr>
+            <td id='create-bookable-social-media-google-label'>
+                Google+
+            </td>
+			<td id='create-bookable-social-media-google-divider'>:</td>
+            <td id='create-bookable-social-media-google-input'>
+                <input type='text' id='create-bookable-social-media-google' name='social-media-google' value='<?php
+				echo $google_link;
+				?>'/>
+            </td>
+        </tr>
+
+		<tr>
+            <td id='create-bookable-social-media-twitter-label'>
+                Twitter
+            </td>
+			<td id='create-bookable-social-media-twitter-divider'>:</td>
+            <td id='create-bookable-social-media-twitter-input'>
+                <input type='text' id='create-bookable-social-media-twitter' name='social-media-twitter' value='<?php
+				echo $twitter_link;
+				?>'/>
+            </td>
+        </tr>
+
+		<tr>
+            <td id='create-bookable-social-media-vtour-label'>
+                Virtual tour
+            </td>
+			<td id='create-bookable-social-media-vtour-divider'>:</td>
+            <td id='create-bookable-social-media-vtour-input'>
+                <input type='text' id='create-bookable-social-media-vtour' name='social-media-vtour' value='<?php
+				echo $vtour_link;
+				?>'/>
+            </td>
+        </tr>
+
+    </table>
+
+	</td>

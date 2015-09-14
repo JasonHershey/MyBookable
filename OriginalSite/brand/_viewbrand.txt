@@ -1,0 +1,31 @@
+<h2><?php echo $temp_brandname; ?></h2>
+<p><?php echo $temp_brandname; ?></p>
+ <table id='view-brand-table'>
+ <tr>
+	<td><b>Address</b></td>
+	<td></td>
+	<td>
+		<?php echo $temp_address; ?>
+		<br/>
+		<?php echo $temp_city.", ".$temp_state." ".$temp_postalCode; ?>
+		<br/>
+	</td>
+	<td rowspan='2' width='200px'><?php include '_showbrandimage.php' ?></td>
+ </tr>
+ <tr>
+	<td><b>Contact:</b></td>
+	<td></td>
+	<td>
+		<?php echo $temp_email; ?>
+		<br/>
+		<?php echo $temp_phone; ?>
+		<br/>
+		<?php echo $temp_fax; ?>
+		<br/>
+	</td>
+ </tr>
+</table>
+
+
+</body>
+</html>
