@@ -3,9 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\bookable
+use App\Bookable;
 
-class bookable_place extends bookable
+class BookablePlace extends Bookable
 {
-    //
+    protected $table = 'BookablePlace';
+    protected $fillable = array_push($fillable, 'location', 'nonsmoking', 'wifi', 'ADA', 'insurance', 'capacity');
 }
