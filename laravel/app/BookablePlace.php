@@ -8,5 +8,5 @@ use App\Bookable;
 class BookablePlace extends Bookable
 {
     protected $table = 'BookablePlace';
-    protected $fillable = array_push($fillable, 'location', 'nonsmoking', 'wifi', 'ADA', 'insurance', 'capacity');
+    protected $fillable = array_push(Bookable::$fillable, 'location', 'nonsmoking', 'wifi', 'ADA', 'insurance', 'capacity');
 }
