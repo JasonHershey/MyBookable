@@ -1,7 +1,7 @@
 @extends('bootstrap')
 
 @section('title')
-  Sign up and organize your tasks!
+  Sign up for bookables
 @endsection
 
 @section('nav')
@@ -28,8 +28,18 @@
       {!! csrf_field() !!}
 
       <div class="form-group">
-        <label>Name</label>
-        <input class="form-control" type="text" name="name" value="{{ old('name') }}">
+        <label>First Name</label>
+        <input class="form-control" type="text" name="fname" value="{{ old('fname') }}">
+      </div>
+
+      <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" type="text" name="lname" value="{{ old('lname') }}">
+      </div>
+
+      <div class="form-group">
+        <label>Username</label>
+        <input class="form-control" type="text" name="uname" value="{{ old('uname') }}">
       </div>
 
       <div class="form-group">

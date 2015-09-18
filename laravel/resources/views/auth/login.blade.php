@@ -1,7 +1,7 @@
 @extends('bootstrap')
 
 @section('title')
-  Sign in to see your tasks!
+  MyBookables Login
 @endsection
 
 @section('nav')
@@ -28,8 +28,8 @@
       {!! csrf_field() !!}
 
       <div class="form-group">
-          <label>Email</label>
-          <input class="form-control" type="email" name="email" value="{{ old('email') }}">
+          <label>Username</label>
+          <input class="form-control" type="text" name="username" value="{{ old('email') }}">
       </div>
 
       <div class="form-group">

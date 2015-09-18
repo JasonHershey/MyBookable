@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Todo App</a>
+          <a class="navbar-brand" href="/">MyBookables</a>
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">
