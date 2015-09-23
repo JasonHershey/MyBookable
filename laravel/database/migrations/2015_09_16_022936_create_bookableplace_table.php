@@ -10,7 +10,7 @@ class CreateBookableplaceTable extends Migration
      *
      * @return void
      */
-    // protected $fillable = ['name', 'primary_image', 'owner', 'type', 'description', 'additional_images'];
+    // protected $fillable = ['name', 'bookable_id', 'rates', 'min_period', 'hours', 'date_start', 'primary_image', 'owner', 'type', 'description', 'additional_images', 'status'];
     // protected $fillable = array_push(Bookable::$fillable, 'location', 'nonsmoking', 'wifi', 'ADA', 'insurance', 'capacity');
     public function up()
     {
@@ -18,6 +18,7 @@ class CreateBookableplaceTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->json('images'); // {'primary': 'url', 'secondary': ['urls']}
+            $table->string('status');
             $table->string('owner')->refrences('id')->on('users')->onDelete('cascade');
             $table->string('type');
             $table->text('description');
