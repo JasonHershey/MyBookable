@@ -36,10 +36,10 @@ class AdjustBookableplaceRates extends Migration
       */
         Schema::table('bookableplace', function (Blueprint $table) {
             // $table->integer('bookable_id');
-            $table->json('rates');
-            $table->string('min_period');
-            $table->json('hours');
-            $table->date('date_start');
+            $table->json('rates')->default('{}');
+            $table->string('min_period')->default('1');
+            $table->json('hours')->default('{}');
+            $table->date('date_start')->default('');
         });
     }
 
