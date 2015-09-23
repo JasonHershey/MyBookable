@@ -25,5 +25,5 @@ class Bookable extends Model
     }
   */
 
-  protected $fillable = ['name', 'bookable_id', 'rates', 'min_period', 'hours', 'date_start', 'primary_image', 'owner', 'type', 'description', 'additional_images'];
+  protected $fillable = ['name', 'bookable_id', 'rates', 'min_period', 'hours', 'date_start', 'primary_image', 'owner', 'type', 'description', 'additional_images', 'status'];
 }
