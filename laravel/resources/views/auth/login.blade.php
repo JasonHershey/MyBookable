@@ -28,8 +28,8 @@
       {!! csrf_field() !!}
 
       <div class="form-group">
-          <label>Username</label>
-          <input class="form-control" type="text" name="username" value="{{ old('email') }}">
+          <label>Email</label>
+          <input class="form-control" type="email" name="email" value="{{ old('email') }}">
       </div>
 
       <div class="form-group">
