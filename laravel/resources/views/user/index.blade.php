@@ -36,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">John Doe - MyBookable</a>
+                <a class="navbar-brand" href="index.html">{{$user->first_name}} {{$user->last_name}} - MyBookable</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -48,40 +48,8 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> - User Settings</a>
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> - Your Settings</a>
                     </li>
-                    <!-- <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -210,7 +178,7 @@
                             <div class="panel-body">
                               <form>
                                 {!! csrf_field() !!}
-                                <input type="text" class="form-control" placeholder="John.Doe@example.com">
+                                <input type="text" class="form-control" value="{{$user->email}}" placeholder="email">
                               </form>
                             </div>
                         </div>
@@ -252,9 +220,10 @@
                             <div class="panel-body">
                               <form>
                                 {!! csrf_field() !!}
-                                <input type="text" class="form-control" placeholder="Address">
-                                <input type="text" class="form-control" placeholder="City, State">
-                                <input type="number" class="form-control" placeholder="Zip Code">
+                                <input type="text" class="form-control" placeholder="Address" value="{{$user->address}}">
+                                <input type="text" class="form-control" placeholder="City" value="{{$user->city}}">
+                                <input type="text" class="form-control" placeholder="State" value="{{$user->state}}">
+                                <input type="number" class="form-control" placeholder="Zip Code" value="{{$user->zip}}">
                               </form>
                             </div>
                         </div>
@@ -267,7 +236,9 @@
                             <div class="panel-body">
                               <form>
                                 {!! csrf_field() !!}
-                                <input type="number" class="form-control" placeholder="Phone Number">
+                                <input type="number" class="form-control" placeholder="Phone Number" value="{{$user->phones}}">
+                                <input type="number" class="form-control" placeholder="Mobile Number" value="{{$user->phones}}">
+                                <input type="number" class="form-control" placeholder="Work Number" value="{{$user->phones}}">
                               </form>
                             </div>
                         </div>
@@ -280,7 +251,7 @@
                             <div class="panel-body">
                               <form>
                                 {!! csrf_field() !!}
-                                <textarea class="form-control" placeholder="Links to your social media accounts"></textarea>
+                                <textarea class="form-control" placeholder="Links to your social media accounts" value="{{$user->social_media}}"></textarea>
                               </form>
                             </div>
                         </div>

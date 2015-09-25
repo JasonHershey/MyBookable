@@ -27,8 +27,8 @@ class UserController extends Controller
 
     public function index()
     {
-      $owner = \Auth::user()->email;
-      return view('user.index', []);
+      $user = \Auth::user();
+      return view('user.index', ['user' => $user]);
     }
 
     /**
