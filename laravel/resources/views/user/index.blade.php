@@ -177,7 +177,7 @@
                             </div>
                             <div class="panel-body">
                               <form method="post">
-                                <input type="hidden" name="_token" name="{{csrf_token()}}">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="text" class="form-control" value="{{$user->email}}" placeholder="email">
                               </form>
                             </div>
