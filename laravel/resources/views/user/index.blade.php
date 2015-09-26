@@ -176,8 +176,8 @@
                                 <h3 class="panel-title">Email</h3>
                             </div>
                             <div class="panel-body">
-                              <form>
-                                {!! csrf_field() !!}
+                              <form method="post">
+                                <input type="hidden" name="_token" name="{{csrf_token()}}">
                                 <input type="text" class="form-control" value="{{$user->email}}" placeholder="email">
                               </form>
                             </div>
@@ -190,7 +190,7 @@
                             </div>
                             <div class="panel-body">
                               <form>
-                                {!! csrf_field() !!}
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="file">
                               </form>
                             </div>
@@ -203,7 +203,7 @@
                             </div>
                             <div class="panel-body">
                               <form>
-                                {!! csrf_field() !!}
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="password" class="form-control" placeholder="Old Password">
                                 <input type="password" class="form-control" placeholder="New Password">
                                 <input type="password" class="form-control" placeholder="Confirm Password">
@@ -219,7 +219,7 @@
                             </div>
                             <div class="panel-body">
                               <form>
-                                {!! csrf_field() !!}
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="text" class="form-control" placeholder="Address" value="{{$user->address}}">
                                 <input type="text" class="form-control" placeholder="City" value="{{$user->city}}">
                                 <input type="text" class="form-control" placeholder="State" value="{{$user->state}}">
@@ -235,7 +235,7 @@
                             </div>
                             <div class="panel-body">
                               <form>
-                                {!! csrf_field() !!}
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="number" class="form-control" placeholder="Phone Number" value="{{$user->phones}}">
                                 <input type="number" class="form-control" placeholder="Mobile Number" value="{{$user->phones}}">
                                 <input type="number" class="form-control" placeholder="Work Number" value="{{$user->phones}}">
@@ -250,8 +250,8 @@
                             </div>
                             <div class="panel-body">
                               <form>
-                                {!! csrf_field() !!}
-                                <textarea class="form-control" placeholder="Links to your social media accounts" value="{{$user->social_media}}"></textarea>
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                <textarea class="form-control" placeholder="Links to your social media accounts" value="{}"></textarea>
                               </form>
                             </div>
                         </div>
