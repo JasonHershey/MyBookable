@@ -25,10 +25,14 @@ class UserController extends Controller
        $this->middleware('auth');
     }
 
-    public function index()
+    public function get_home()
     {
       $user = \Auth::user();
       return view('user.index', ['user' => $user]);
+    }
+
+    public function post_home(Request $request) {
+      return "naw man";
     }
 
     /**

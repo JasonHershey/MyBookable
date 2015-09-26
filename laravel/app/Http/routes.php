@@ -11,14 +11,16 @@
 |
 */
 
+Route::get('/', function () {
+  return redirect('home');
+});
+
 Route::controllers([
     'auth' => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController'
+    'password' => 'Auth\PasswordController',
+    '' => 'UserController'
 
 ]);
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', 'UserController@index');
+// Route::get('/home', 'UserController@index');
