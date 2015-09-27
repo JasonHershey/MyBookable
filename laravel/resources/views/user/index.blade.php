@@ -178,7 +178,9 @@
                             <div class="panel-body">
                               <form method="post">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                <input type="text" class="form-control" value="{{$user->email}}" placeholder="email">
+                                <input type="hidden" name="field" value="email">
+                                <input type="text" class="form-control" name="data" value="{{$user->email}}" placeholder="email">
+                                <input type="submit" class="btn btn-primary">
                               </form>
                             </div>
                         </div>
@@ -189,9 +191,11 @@
                                 <h3 class="panel-title">Avatar</h3>
                             </div>
                             <div class="panel-body">
-                              <form>
+                              <form method="post">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                <input type="file">
+                                <input type="hidden" name="field" value="avatar">
+                                <input type="file" name="data">
+                                <input type="submit" class="btn btn-primary">
                               </form>
                             </div>
                         </div>
@@ -202,13 +206,12 @@
                                 <h3 class="panel-title">Password</h3>
                             </div>
                             <div class="panel-body">
-                              <form>
-                                <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                <input type="password" class="form-control" placeholder="Old Password">
-                                <input type="password" class="form-control" placeholder="New Password">
-                                <input type="password" class="form-control" placeholder="Confirm Password">
-                              </form>
-                            </div>
+                              <form method="post" action="/password/email">
+                              {!! csrf_field() !!}
+                              <input type="hidden" name="email" value="{{ old('email') }}">
+                              <input type="submit" class="btn btn-default" value="Send me a password reset form">
+                            </form>
+                          </div>
                         </div>
                     </div>
                     <div class="col-md-12"><hr></div>
@@ -218,12 +221,14 @@
                                 <h3 class="panel-title">Address</h3>
                             </div>
                             <div class="panel-body">
-                              <form>
-                                <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                <input type="text" class="form-control" placeholder="Address" value="{{$user->address}}">
-                                <input type="text" class="form-control" placeholder="City" value="{{$user->city}}">
-                                <input type="text" class="form-control" placeholder="State" value="{{$user->state}}">
-                                <input type="number" class="form-control" placeholder="Zip Code" value="{{$user->zip}}">
+                              <form method="post">
+                                {!! csrf_field() !!}
+                                <input type="hidden" name="field" value="address">
+                                <input type="text" name="data1" class="form-control" placeholder="Address" value="{{$user->address}}">
+                                <input type="text" name="data2" class="form-control" placeholder="City" value="{{$user->city}}">
+                                <input type="text" name="data3" class="form-control" placeholder="State" value="{{$user->state}}">
+                                <input type="number" name="data4" class="form-control" placeholder="Zip Code" value="{{$user->zip}}">
+                                <input type="submit" class="btn btn-primary">
                               </form>
                             </div>
                         </div>
@@ -234,11 +239,13 @@
                                 <h3 class="panel-title">Phone Numbers</h3>
                             </div>
                             <div class="panel-body">
-                              <form>
+                              <form method="post">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                <input type="number" class="form-control" placeholder="Phone Number" value="{{$user->phones}}">
-                                <input type="number" class="form-control" placeholder="Mobile Number" value="{{$user->phones}}">
-                                <input type="number" class="form-control" placeholder="Work Number" value="{{$user->phones}}">
+                                <input type="hidden" name="field" value="phones">
+                                <input type="number" class="form-control" name="data1" placeholder="Phone Number" value="{{$user->phones}}">
+                                <input type="number" class="form-control" name="data2" placeholder="Mobile Number" value="{{$user->phones}}">
+                                <input type="number" class="form-control" name="data3" placeholder="Work Number" value="{{$user->phones}}">
+                                <input type="submit" class="btn btn-primary">
                               </form>
                             </div>
                         </div>
@@ -249,9 +256,11 @@
                                 <h3 class="panel-title">Social Media</h3>
                             </div>
                             <div class="panel-body">
-                              <form>
-                                <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                <textarea class="form-control" placeholder="Links to your social media accounts" value="{}"></textarea>
+                              <form method="post">
+                                {!! csrf_field() !!}
+                                <input type="hidden" name="field" value="social">
+                                <textarea class="form-control" name="data" placeholder="Links to your social media accounts" value="{{$user->social_media}}"></textarea>
+                                <input type="submit" class="btn btn-primary">
                               </form>
                             </div>
                         </div>

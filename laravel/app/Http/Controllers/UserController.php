@@ -32,7 +32,24 @@ class UserController extends Controller
     }
 
     public function post_home(Request $request) {
-      return "naw man";
+      if ($request->field == 'email') {
+        return $request->data; // email
+      } elseif ($request->field == 'avatar') {
+        return $request->data; // image
+      } elseif ($request->field == 'address') {
+        return $request->data1;
+        return $request->data2;
+        return $request->data3;
+        return $request->data4;
+      } elseif ($request->field == 'phones') {
+        return $request->data1;
+        return $request->data2;
+        return $request->data3;
+      } elseif ($request->field == 'social') {
+        return $request->data;
+      } else {
+        return View('errors.404');
+      }
     }
 
     /**
