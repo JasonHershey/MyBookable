@@ -169,6 +169,21 @@
                 </div> -->
                 <!-- /.row -->
 
+
+                @if (isset($message))
+                  <div class="row">
+                    <div class="container">
+                      <div class="alert alert-info">
+                        {{ $message }}
+                      </div>
+                    </div>
+                  </div>
+                @endif
+
+
+
+
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="panel panel-default">
@@ -179,7 +194,8 @@
                               <form method="post">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="hidden" name="field" value="email">
-                                <input type="text" class="form-control" name="data" value="{{$user->email}}" placeholder="email">
+                                <input type="hidden" name="data1" value="{{$user->email}}">
+                                <input type="text" class="form-control" name="data2" value="{{$user->email}}" placeholder="email">
                                 <input type="submit" class="btn btn-primary">
                               </form>
                             </div>

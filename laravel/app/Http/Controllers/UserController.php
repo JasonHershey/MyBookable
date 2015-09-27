@@ -33,7 +33,12 @@ class UserController extends Controller
 
     public function post_home(Request $request) {
       if ($request->field == 'email') {
-        return $request->data; // email
+        $oldemail = $request->data1;
+        $email = $request->data2;
+        $user = User::where('email', $oldemail)->limit(1)->update(['email' => $email]);
+        $user = User::where('email', $email)->get();
+        $user = \Auth::user();
+        return view('user.index', ['user' => $user, 'message' => 'Updated Email!']);
       } elseif ($request->field == 'avatar') {
         return $request->data; // image
       } elseif ($request->field == 'address') {
