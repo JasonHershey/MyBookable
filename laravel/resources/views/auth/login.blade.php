@@ -44,6 +44,9 @@
       <div class="form-group">
         <button type="submit" class="btn btn-success btn-lg">Login</button>
       </div>
+
+      <div class="form-group">
+        <a class="btn btn-danger btn-lg" href="/password/email">Forgot Password?</a>
   </form>
 </div>
 @endsection

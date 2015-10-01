@@ -45,28 +45,11 @@ class UserController extends Controller
         $name = $user->username;
 
         if ($request->file('image')->isValid()) {
-
           $request->file('image')->move('users/', $user->username.'.png');
-
-
           return view('user.index', ['user' => $user, 'message' => 'Updated Avatar!']);
-
-          // return $request->file('image'); // image
         } else {
-          return view('user.index', ['user' => $user, 'message' => 'Failed to update Avatar!']);
+          return view('user.index', ['user' => $user, 'message' => 'Failed to update Avatar... Please try again in a few minutes.']);
         }
-
-
-        // return $user->username;
-
-        // return $_FILES;
-
-        // return get_object_vars($request);
-
-
-
-
-
       } elseif ($request->field == 'address') {
         return $request->data1;
         return $request->data2;

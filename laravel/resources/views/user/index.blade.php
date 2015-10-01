@@ -171,13 +171,13 @@
 
 
                 @if (isset($message))
-                  <div class="row">
-                    <div class="container">
-                      <div class="alert alert-info">
-                        {{ $message }}
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="alert alert-info">
+                          {{ $message }}
+                        </div>
                       </div>
                     </div>
-                  </div>
                 @endif
 
 
@@ -213,6 +213,8 @@
                                 <input type="file" name="image">
                                 <input type="submit" class="btn btn-primary">
                               </form>
+                              <br>
+                              <img src="{{asset("users")."/".$user->username.".png"}}" width="100%">
                             </div>
                         </div>
                     </div>
@@ -222,11 +224,12 @@
                                 <h3 class="panel-title">Password</h3>
                             </div>
                             <div class="panel-body">
-                              <form method="post" action="/password/email">
-                              {!! csrf_field() !!}
-                              <input type="hidden" name="email" value="{{ old('email') }}">
-                              <input type="submit" class="btn btn-default" value="Send me a password reset form">
+                              <form method="get" action="/auth/logout">
+                              <!-- {!! csrf_field() !!} -->
+                              <!-- <input type="hidden" name="email" value="{{ old('email') }}"> -->
+                              <input type="submit" class="btn btn-default btn-danger" value="Change Password?">
                             </form>
+
                           </div>
                         </div>
                     </div>
