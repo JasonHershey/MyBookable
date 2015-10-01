@@ -32,15 +32,41 @@ class UserController extends Controller
     }
 
     public function post_home(Request $request) {
+      $user = \Auth::user();
       if ($request->field == 'email') {
         $oldemail = $request->data1;
         $email = $request->data2;
         $user = User::where('email', $oldemail)->limit(1)->update(['email' => $email]);
         $user = User::where('email', $email)->get();
-        $user = \Auth::user();
         return view('user.index', ['user' => $user, 'message' => 'Updated Email!']);
       } elseif ($request->field == 'avatar') {
-        return $request->data; // image
+
+        $image = $request->data;
+        $name = $user->username;
+
+        if ($request->file('image')->isValid()) {
+
+          $request->file('image')->move('users/', $user->username.'.png');
+
+
+          return view('user.index', ['user' => $user, 'message' => 'Updated Avatar!']);
+
+          // return $request->file('image'); // image
+        } else {
+          return view('user.index', ['user' => $user, 'message' => 'Failed to update Avatar!']);
+        }
+
+
+        // return $user->username;
+
+        // return $_FILES;
+
+        // return get_object_vars($request);
+
+
+
+
+
       } elseif ($request->field == 'address') {
         return $request->data1;
         return $request->data2;

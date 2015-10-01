@@ -207,10 +207,10 @@
                                 <h3 class="panel-title">Avatar</h3>
                             </div>
                             <div class="panel-body">
-                              <form method="post">
+                              <form method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="hidden" name="field" value="avatar">
-                                <input type="file" name="data">
+                                <input type="file" name="image">
                                 <input type="submit" class="btn btn-primary">
                               </form>
                             </div>
