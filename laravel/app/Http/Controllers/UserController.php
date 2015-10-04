@@ -36,8 +36,8 @@ class UserController extends Controller
       if ($request->field == 'email') {
         $oldemail = $request->data1;
         $email = $request->data2;
-        $user = User::where('email', $oldemail)->limit(1)->update(['email' => $email]);
-        $user = User::where('email', $email)->get();
+        User::where('email', $oldemail)->limit(1)->update(['email' => $email]);
+        $user = \Auth::user();
         return view('user.index', ['user' => $user, 'message' => 'Updated Email!']);
       } elseif ($request->field == 'avatar') {
 
@@ -51,14 +51,20 @@ class UserController extends Controller
           return view('user.index', ['user' => $user, 'message' => 'Failed to update Avatar... Please try again in a few minutes.']);
         }
       } elseif ($request->field == 'address') {
-        return $request->data1;
-        return $request->data2;
-        return $request->data3;
-        return $request->data4;
+        $email = $user->email;
+        User::where('email', $email)->limit(1)->update([
+          'address' => $request->data1,
+          'city' => $request->data2,
+          'state' => $request->data3,
+          'zip' => $request->data4,
+        ]);
+        return view('user.index', ['user' => $user, 'message' => 'Updated Address!']);
       } elseif ($request->field == 'phones') {
-        return $request->data1;
-        return $request->data2;
-        return $request->data3;
+        $email = $user->email;
+        User::where('email', $email)->limit(1)->update([
+          'phones' => $request->data1
+        ]);
+        return view('user.index', ['user' => $user, 'message' => 'Updated Phone numbers!']);
       } elseif ($request->field == 'social') {
         return $request->data;
       } else {

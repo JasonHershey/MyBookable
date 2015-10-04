@@ -229,7 +229,6 @@
                               <!-- <input type="hidden" name="email" value="{{ old('email') }}"> -->
                               <input type="submit" class="btn btn-default btn-danger" value="Change Password?">
                             </form>
-
                           </div>
                         </div>
                     </div>
@@ -262,14 +261,12 @@
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="hidden" name="field" value="phones">
                                 <input type="number" class="form-control" name="data1" placeholder="Phone Number" value="{{$user->phones}}">
-                                <input type="number" class="form-control" name="data2" placeholder="Mobile Number" value="{{$user->phones}}">
-                                <input type="number" class="form-control" name="data3" placeholder="Work Number" value="{{$user->phones}}">
                                 <input type="submit" class="btn btn-primary">
                               </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Social Media</h3>
@@ -283,7 +280,7 @@
                               </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-md-12"><hr></div>
                     <div class="col-md-12">
                       <button class="btn btn-lg btn-primary">Save</button>
